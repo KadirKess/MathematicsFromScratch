@@ -82,7 +82,7 @@ It is really large, but I tried to test with a lot of different values, and in a
 
 With that, I found it interesting to compare the execution time of my functions and those already presents in Python, so I drew plots with the `NaturalNumbersTime.py` file in `NaturalNumbers/Tests`:
 
-<img src="NaturalNumbers/Tests/TimePlots.png" width="600"/>
+<img src="00_NaturalNumbers/Tests/TimePlots.png" width="600"/>
 
 Obviously, my functions are bad in execution time, but it was to be expected, the goal of the project is educationnal and absolutely not to create an optimized way to represent numbers (what is done here would be at the opposite).
 But it is still interesting to see that as for more complex operations the previous operations are used, the complexity grows pretty fast.
