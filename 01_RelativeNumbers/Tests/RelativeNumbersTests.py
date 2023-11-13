@@ -15,6 +15,9 @@ def red(text):
 
 # Test initialization
 def test_initialization():
+    """
+    Tests the initialization of the RelativeNumbers class.
+    """
     five = RelativeNumbers(5)
     minus_three = RelativeNumbers(-3)
     zero = RelativeNumbers()
@@ -27,6 +30,9 @@ def test_initialization():
 
 # Test string conversion
 def test_string_conversion():
+    """
+    Tests the string conversion of the RelativeNumbers class.
+    """
     minus_two = RelativeNumbers(-2)
     zero = RelativeNumbers()
     
@@ -37,6 +43,9 @@ def test_string_conversion():
     
 # Test integer conversion
 def test_integer_conversion():
+    """
+    Tests the integer conversion of the RelativeNumbers class.
+    """
     minus_two = RelativeNumbers(-2)
     zero = RelativeNumbers()
     
@@ -47,6 +56,9 @@ def test_integer_conversion():
     
 # Test equality
 def test_equality():
+    """
+    Tests the __eq__ method of the RelativeNumbers class.
+    """
     minus_two = RelativeNumbers(-2)
     another_minus_two = RelativeNumbers(-2)
     minus_one = RelativeNumbers(-1)
@@ -61,6 +73,9 @@ def test_equality():
 
 # Test comparison
 def test_comparison():
+    """
+    Tests the comparisons of the RelativeNumbers class.
+    """
     minus_five = RelativeNumbers(-5)
     minus_three = RelativeNumbers(-3)
     minus_two = RelativeNumbers(-2)
@@ -97,6 +112,9 @@ def test_comparison():
     
 # Test normalization
 def test_normalization():
+    """
+    Tests the normalization method of the RelativeNumbers class.
+    """
     # Test cases where normalization changes the values
     non_normalized_positive = RelativeNumbers(3) - RelativeNumbers(1) # Expected to be normalized to 2
     non_normalized_negative = RelativeNumbers(-5) + RelativeNumbers(3) # Expected to be normalized to -2
@@ -125,6 +143,9 @@ def test_normalization():
 
 # Test addition
 def test_addition():
+    """
+    Tests the __add__ method of the RelativeNumbers class.
+    """
     minus_ten = RelativeNumbers(-10)
     minus_six = RelativeNumbers(-6)
     minus_two = RelativeNumbers(-2)
@@ -169,6 +190,9 @@ def test_addition():
     
 # Test subtraction
 def test_subtraction():
+    """
+    Tests the __sub__ method of the RelativeNumbers class.
+    """
     minus_twelve = RelativeNumbers(-12)
     minus_three = RelativeNumbers(-3)
     minus_two = RelativeNumbers(-2)
@@ -210,6 +234,9 @@ def test_subtraction():
     
 # Test multiplication
 def test_multiplication():
+    """
+    Tests the __mul__ method of the RelativeNumbers class.
+    """
     # Normalized numbers
     minus_four = RelativeNumbers(-4)
     minus_three = RelativeNumbers(-3)
@@ -286,6 +313,9 @@ def test_multiplication():
     
 # Test division
 def test_division():
+    """
+    Tests the __truediv__ method of the RelativeNumbers class.
+    """
     minus_five = RelativeNumbers(-5)
     minus_two = RelativeNumbers(-2)
     minus_one = RelativeNumbers(-1)
@@ -336,6 +366,9 @@ def test_division():
 
 # Test modulo
 def test_modulo():
+    """
+    Tests the __mod__ method of the RelativeNumbers class.
+    """
     minus_five = RelativeNumbers(-5)
     minus_two = RelativeNumbers(-2)
     minus_one = RelativeNumbers(-1)
@@ -374,6 +407,9 @@ def test_modulo():
 
 # Test power
 def test_power():
+    """
+    Tests the __pow__ method of the RelativeNumbers class.
+    """
     minus_three = RelativeNumbers(-3)
     minus_two = RelativeNumbers(-2)
     minus_one = RelativeNumbers(-1)
@@ -413,6 +449,9 @@ def test_power():
     
 # Execute the test suite
 def run_tests():
+    """
+    Runs all the tests of the RelativeNumbers class.
+    """
     test_initialization()
     test_string_conversion()
     test_integer_conversion()
@@ -428,4 +467,6 @@ def run_tests():
     
     print(f"\nAll tests {green('[PASSED]')}!")
 
-run_tests()
+# Execute the test suite
+if __name__ == "__main__":
+    run_tests()

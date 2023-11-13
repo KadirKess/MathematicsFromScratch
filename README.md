@@ -24,7 +24,8 @@ For the testing, I used the followig librairies:
 
 1. Natual Numbers (**DONE**)
 2. Relative Numbers (**DONE**)
-3. Rational Numbers (**TODO**)
+3. Rational Numbers (**DONE**)
+4. Sort of Real Numbers (**TODO**)
 
 The rest of the list has to be determined, but those objectives already place a nice challenge.
 
@@ -111,3 +112,25 @@ This implementation implies that, for example $(3, 1)$ and $(2, 0)$ are equal.
 
 #### 2.4 Conclusion
 This part was way easier than the one on natural numbers, mainly because in the first part I had to be creative to find how to complete the operations, but here I just needed to reuse the same principles.
+
+### 3. Rational Numbers
+After implementing natural and relative numbers, the next logical step was to create rational numbers. Rational numbers, also known as fractions, are numbers that can be expressed as the quotient or fraction $\frac{a}{b}$ of two integers, where $a$ (the numerator) and $b$ (the denominator) are both relative numbers, and $b$ is not zero.
+
+#### 3.1 Design Philosophy
+- **Building on Previous Concepts**: This implementation extends the concepts from natural and relative numbers to fractions, thereby creating a complete set of rational numbers.
+- **Precision and Flexibility**: By representing rational numbers as fractions, we aim to capture the precision and flexibility inherent in these numbers, especially in representing non-integer values.
+- **Educational Insight**: As with the previous implementations, the focus remains on demonstrating the underlying mathematical principles in a clear and understandable way, rather than striving for computational efficiency.
+
+#### 3.2 Implementation Details
+- **Class Structure**: The `RationalNumbers` class encapsulates the properties and operations of rational numbers. Each rational number is represented as a fraction with a numerator and a denominator.
+- **Simplification**: The class includes methods for simplifying fractions to their simplest form, using the greatest common divisor (GCD).
+
+#### 3.3 Operations on Rational Numbers
+- **Arithmetic Operations**: The class supports fundamental arithmetic operations such as addition, subtraction, multiplication, and division. These operations follow the standard rules of fraction arithmetic, utilizing the operations defined for relative numbers.
+- **Comparisons**: Similar to the previous classes, rational numbers can be compared using standard relational operators, providing the ability to evaluate equality, greater than, and less than relationships.
+
+#### 3.4 Conclusion
+This part of the project was without any doubts the most straightforward one.
+We are used to represent rational numbers as fractions, so I was familiar with the operations and the way to represent them.
+The trickiest part was to load the given float value as a fraction: I did not want to use external librairies, so I had to find a way to do it myself.
+I found a way to do it, but it is not the most efficient one, and it is not the most precise one either, but it works.

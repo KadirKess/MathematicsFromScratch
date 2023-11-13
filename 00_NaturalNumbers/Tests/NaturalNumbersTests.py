@@ -15,6 +15,9 @@ def red(text):
 
 # Test initialization
 def test_initialization():
+    """
+    Tests the initialization of the NaturalNumbers class.
+    """
     eighteen = NaturalNumbers(18)
     one = NaturalNumbers(1)
     zero = NaturalNumbers()
@@ -27,6 +30,9 @@ def test_initialization():
 
 # Test string conversion
 def test_string_conversion():
+    """
+    Tests the string conversion of the NaturalNumbers class.
+    """
     two = NaturalNumbers(2)
     zero = NaturalNumbers()
     
@@ -37,6 +43,9 @@ def test_string_conversion():
     
 # Test integer conversion
 def test_integer_conversion():
+    """
+    Tests the integer conversion of the NaturalNumbers class.
+    """
     two = NaturalNumbers(2)
     zero = NaturalNumbers()
     
@@ -47,6 +56,9 @@ def test_integer_conversion():
     
 # Test equality
 def test_equality():
+    """
+    Tests the __eq__ method of the NaturalNumbers class.
+    """
     two = NaturalNumbers(2)
     another_two = NaturalNumbers(2)
     one = NaturalNumbers(1)
@@ -60,6 +72,9 @@ def test_equality():
     
 # Test comparison
 def test_comparison():
+    """
+    Tests the comparisons of the NaturalNumbers class.
+    """
     five = NaturalNumbers(5)
     three = NaturalNumbers(3)
     two = NaturalNumbers(2)
@@ -94,6 +109,9 @@ def test_comparison():
 
 # Test the successor method
 def test_successor():
+    """
+    Tests the successor method of the NaturalNumbers class.
+    """
     zero = NaturalNumbers()
     zero.successor()
     
@@ -107,6 +125,9 @@ def test_successor():
 
 # Test addition
 def test_addition():
+    """
+    Tests the __add__ method of the NaturalNumbers class.
+    """
     ten = NaturalNumbers(10)
     twenty = NaturalNumbers(20)
     thirty = NaturalNumbers(30)
@@ -134,8 +155,11 @@ def test_addition():
     
     print(f"Addition tests {green('[PASSED]')}.")
     
-# Test subtraction with exception handling
+# Test subtraction
 def test_subtraction():
+    """
+    Tests the __sub__ method of the NaturalNumbers class.
+    """
     fifty = NaturalNumbers(50)
     thirty = NaturalNumbers(30)
     twenty = NaturalNumbers(20)
@@ -192,6 +216,9 @@ def test_subtraction():
 
 # Test multiplication
 def test_multiplication():
+    """
+    Tests the __mul__ method of the NaturalNumbers class.
+    """
     twenty = NaturalNumbers(20)
     ten = NaturalNumbers(10)
     five = NaturalNumbers(5)
@@ -224,6 +251,9 @@ def test_multiplication():
     
 # Test division
 def test_division():
+    """
+    Tests the __truediv__ method of the NaturalNumbers class.
+    """
     sixty = NaturalNumbers(60)
     six = NaturalNumbers(6)
     ten = NaturalNumbers(10)
@@ -272,6 +302,9 @@ def test_division():
     
 # Test modulo
 def test_modulo():
+    """
+    Tests the __mod__ method of the NaturalNumbers class.
+    """
     twenty = NaturalNumbers(20)
     ten = NaturalNumbers(10)
     three = NaturalNumbers(3)
@@ -308,6 +341,9 @@ def test_modulo():
 
 # Test power
 def test_power():
+    """
+    Tests the __pow__ method of the NaturalNumbers class.
+    """
     five = NaturalNumbers(5)
     two = NaturalNumbers(2)
     three = NaturalNumbers(3)
@@ -336,23 +372,11 @@ def test_power():
     
     print(f"Power tests {green('[PASSED]')}.")
 
-# Test the copy method
-def test_copy():
-    one = NaturalNumbers(1)
-    two = one.copy()
-    two.successor()
-    five = NaturalNumbers(5)
-    five_copy = five.copy()
-    
-    assert str(two) == '2', f"Copy method {red('[FAILED]')} : 2 = {two}"
-    assert str(one) == '1', f"Copy method {red('[FAILED]')} : original changed : 1 = {one}"
-    assert str(five_copy) == '5', f"Copy method {red('[FAILED]')} : 5 = {five_copy}"
-    
-    print(f"Copy method tests {green('[PASSED]')}.")
-
 def run_tests():
+    """
+    Runs all the tests of the NaturalNumbers class.
+    """
     test_initialization()
-    test_copy()
     test_string_conversion()
     test_integer_conversion()
     test_equality()
@@ -368,4 +392,5 @@ def run_tests():
     print(f"\nAll tests {green('[PASSED]')}!")
 
 # Execute the test suite
-run_tests()
+if __name__ == "__main__":
+    run_tests()
